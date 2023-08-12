@@ -50,13 +50,7 @@ function App() {
     getBalances()
   }, [walletAddress, signingClient])
 
-  const handleConnect = () => {
-    if (walletAddress.length === 0) {
-      connectWallet(false)
-    } else {
-      disconnect()
-    }
-  }
+  
   const {unityProvider, sendMessage, isLoaded } = new useUnityContext({
     loaderUrl: "./Megaman/Build/testegidiyor.loader.js",
     dataUrl: "./Megaman/Build/testegidiyor.data",
